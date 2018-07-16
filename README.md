@@ -20,3 +20,4 @@ This is for OSX - specifically using their builtin packet filter PF.  You will a
 1. `sudo ./stop.sh` <- will disable your packet filter.
 #### NOTE/BUG
 Even when you stop running the start-blocking.sh you will need to run the `sudo ./stop.sh` command to fully disable the filter. 
+Also this was adapted from https://github.com/corbanworks/aws-blocker/blob/master/aws-blocker
