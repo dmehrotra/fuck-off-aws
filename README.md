@@ -10,8 +10,8 @@ This is for OSX - specifically using their builtin packet filter PF.  You will a
 
 ### Installation
 1. Clone this repository 
-1. `cd fuck-off-aws`
-1. `chmod +x build.sh start.sh stop.sh`
+1. `cd fuck-off-aws/scripts`
+1. `chmod +x build.sh start-blocking.sh stop.sh`
 1. create or edit the file: `/etc/pf.conf`, and add this line to the end of it: `block out log from any to <aws>`
 1. `sudo ./build.sh` <- all scripts must be run as a super user :(.  This sript will find the most recent list of Amazon IPs, and set up a filter using PF to block and log all traffic from your machine to those IP addresses.  This will also block any third party content, images, or fonts that are served by AWS.   
 
