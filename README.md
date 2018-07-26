@@ -1,6 +1,6 @@
 
 # Fuck off AWS
-Amazon publishes a list of the IP addresses they control here: https://ip-ranges.amazonaws.com/ip-ranges.json . What follows is a way to prevent yourself / the websites you visit from reaching out to AWS machines. Spoiler alert: The internet becomes pretty unuseable. 
+Amazon publishes a list of the IP addresses they control here: https://ip-ranges.amazonaws.com/ip-ranges.json . What follows is a way to prevent yourself / the websites you visit from reaching out to AWS machines. Spoiler alert: The internet becomes pretty unuseable. For linux see: https://github.com/corbanworks/aws-blocker
 
 ### Dependencies 
 This is for OSX - specifically using their builtin packet filter PF.  You will also need a json processor called JQ.  I used Homebrew to install it
