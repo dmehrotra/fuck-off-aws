@@ -21,3 +21,5 @@ This is for OSX - specifically using their builtin packet filter PF.  You will a
 #### NOTE/BUG
 Even when you stop running the start-blocking.sh you will need to run the `sudo ./stop.sh` command to fully disable the filter. 
 Also this was adapted from https://github.com/corbanworks/aws-blocker/blob/master/aws-blocker
+### OpenVPN
+1. `vpn-server.sh` is meant to be run on a VPN server.  This will block all connected clients' requests to aws
