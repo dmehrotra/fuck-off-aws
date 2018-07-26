@@ -73,8 +73,7 @@ function add_iptables_rules() {
         local ip=${data[0]}
         local regions=$(echo ${data[1]} | tr '[:upper:]' '[:lower:]')
         local services=$(echo ${data[2]} | tr '[:upper:]' '[:lower:]')
-
-        $cmd -A AWS -s "$ip" -j REJECT -m comment --comment "$regions = $services"
+        $cmd -I FORWARD 1 -i tun0 -d "$ip" -j REJECT
     done
 }
 
@@ -90,6 +89,7 @@ FILTERS=$(build_filters "$*")
 
 # IPv4
 create_and_flush_chain "" $position
+echo "v4"
 V4_RANGES=$(extract_ip_ranges "$JSON" "$FILTERS" "prefixes" "ip_prefix")
 add_iptables_rules ""  "$V4_RANGES"
 
